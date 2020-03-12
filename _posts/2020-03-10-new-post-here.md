@@ -2,7 +2,7 @@
 layout: post
 title: '2020 Starts Here'
 subtitle: 'Keep learning...'
-date: 2017-04-18
+date: 2020-03-10
 categories: 技术
 cover: 'http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-postcover.jpg'
 tags: Data Science Machine Learning
