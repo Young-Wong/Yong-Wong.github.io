@@ -1,3 +1,4 @@
+
 # Site settings 配置站点
 title: 'young's blog'
 description: 'machine learning | nlp'
@@ -86,4 +87,3 @@ permalink: /:year/:month/:day/:title.html
 # Plugins
 plugins: [jekyll-paginate]
 
-theme: jekyll-theme-minimal
