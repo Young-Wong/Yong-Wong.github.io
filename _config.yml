@@ -1,7 +1,6 @@
 # Site settings 配置站点
 title: 'my blog'
 description: 'Space for tech blog'
-header-img: assets/img/banner.jpg
 keyword: 'Machine Learning, AI, Deep Learning, NLP, Data Science'
 url: '' # your host
 
