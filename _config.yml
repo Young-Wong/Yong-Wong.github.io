@@ -1,6 +1,5 @@
-theme: jekyll-theme-minimal
 # Site settings 配置站点
-title: 'young's blog'
+title: 'my blog'
 description: 'machine learning | nlp'
 keyword: '廖柯宇, 廖柯宇的独立博客, 廖柯宇的博客, 前端, 前端开发, 前端博客, javascript, vuejs, nodejs, 设计'
 url: '' # your host
