@@ -1,4 +1,4 @@
-
+theme: jekyll-theme-minimal
 # Site settings 配置站点
 title: 'young's blog'
 description: 'machine learning | nlp'
