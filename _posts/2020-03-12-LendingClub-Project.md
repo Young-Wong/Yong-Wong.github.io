@@ -35,28 +35,28 @@ After loading the data, we found out that the dataset has 89 numeric features bu
  
 The feature installment is the amount of monthly payment for each loan. By plotting a histogram graph on installment, we can see that the monthly payment of $200 - $400 has the highest counts among all the installment amount. This applies that people tend to accept the monthly installment around $200 to $400. 
 
-![](assets/img/fintech/img04.png)
+![](/assets/img/fintech/img04.png)
 
 In terms of analyzing whether a loan can be default, the borrower's income verification status is a good aspect. Usually if the borrower's source of income is verified, then the risk of the default is lower and vice versa. However, we drew a graph on the feature named verificationstatus and the result doesn’t look like what we imaged. According to the graph, the counts of default loan that have an income verified has a very high rate around 20%. This is a very interesting open question for us to think about. 
 
-![](assets/img/fintech/img05.png)
+![](/assets/img/fintech/img05.png)
 
 Another important feature to consider is what type of home ownership did the borrower have.  We also plotted the bar charts of the default counts by homeownership. According to the graph, borrowers who don’t own their house and they pay rent to live have a higher risk of default rate. What surprised us is that people who are paying mortgage is less likely to be default than people own their home without any mortgage. 
 
-![](assets/img/fintech/img06.png)
+![](/assets/img/fintech/img06.png)
 
 
 ## Features
  
 For an issued loan, we found out that the column fundedamnt is equal to loanamnt. Since we will only do analysis on issued loan, we can drop fundedamnt for our task purpose. 
 
-![](assets/img/fintech/img07.png)
+![](/assets/img/fintech/img07.png)
 
 We did some feature engineering on the data time when the borrowers' earliest reported credit line was opened. Usually people who open their credit earlier means they have been in the credit system for a longer time and less likely to have default loan. SO we have changed the date time of the column earliestcrline into numeric number.
 
-![](assets/img/fintech/img08.png)
-![](assets/img/fintech/img09.png)
-![](assets/img/fintech/img10.png)
+![](/assets/img/fintech/img08.png)
+![](/assets/img/fintech/img09.png)
+![](/assets/img/fintech/img10.png)
 
 
 For the rest part of the feature engineering, we have converted the interest rate and the other rate by percentage data type into numeric. And we did the ordinal feature encoding for grade (LC assigned loan grade) and subgrade. We have also did the one-hot-encoding of some categorical features like homeownership, verificationstatus, purpose and initialliststatus in order to fit into the model like Xgboost for future model training (figure shows above).
@@ -81,14 +81,14 @@ Area under the ROC curve - validation: 0.699226
 Area under the ROC curve - train: 0.802750
 Area under the ROC curve - test: 0.710706
 
-![](assets/img/fintech/img11.png)
-![](assets/img/fintech/img12.png)
+![](/assets/img/fintech/img11.png)
+![](/assets/img/fintech/img12.png)
 
 ## Conclusion
  
 Based on the train model, we have also checked and generated the ranking of the features according to the importance of the default risk. The top feature is called dti which is a ratio calculated using the borrower’s total monthly debt payments on the total debt obligations, excluding mortgage and the requested LC loan, divided by the borrower’s self-reported monthly income. The second top feature is mo_sin_old_il_acct which is Months since oldest bank installment account opened. This means the longer the borrowers exist in the credit system, the less likely they default their loan. There are other important features such as Annual Income, Total Installment high credit/credit Limit, Revolving Credit Limit and Portion of Balances.
 
-![](assets/img/fintech/img13.png)
+![](/assets/img/fintech/img13.png)
  
  
 ## Model distribution
@@ -97,7 +97,7 @@ We have saved our model into pkl file. And distributed our trained model into th
  
 This model makes the process easier by using machine-learning to calculate which notes are more likely to perform better than others. The moment new loans are added to the platforms, the algorithm analyzes the variables of these loans and only invests in the best ones. The entire process, again, takes a split second.
 
-![](assets/img/fintech/img14.png)
+![](/assets/img/fintech/img14.png)
 
 
 
