@@ -22,14 +22,14 @@ The metric we are using to evaluate the machine learning model is AUC, area unde
 
 We got the historical data from LendingClub csv file and the current via API https://api.lendingclub.com/api/investor/v1/loans/listing like below:
 
-![](assets/img/fintech/img01.png)
+![](/assets/img/fintech/img01.png)
 
 ## EDA
  
 After loading the data, we found out that the dataset has 89 numeric features but 29 of them are all Nulls and 19 categorical features.    
 
-![](assets/img/fintech/img02.png)
-![](assets/img/fintech/img03.png)
+![](/assets/img/fintech/img02.png)
+![](/assets/img/fintech/img03.png)
 
 ## Insights and Plots
  
