@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pytorch Tensor Operation
-date: 2020-03-12
+date: 2020-04-30
 categories: Pytorch
 tags: Pytorch
 ---
