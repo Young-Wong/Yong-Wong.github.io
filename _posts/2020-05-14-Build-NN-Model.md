@@ -5,24 +5,25 @@ date: 2020-05-14
 categories: Pytorch
 tags: Pytorch
 ---
-This blog is about how to build neural netword model using PyTorch with <code>nn.Module</code> class.
+This blog is about how to build neural network model using PyTorch with <code>nn.Module</code> class.
 
 ### torch.nn
-<code >torch.nn.Parameter</code>
-    Class: A kind of Tensor that is to be considered a module parameter.
+<code >torch.nn.Parameter</code><br>
+    **Class**: A kind of Tensor that is to be considered a module parameter.
 
-<code>torch.nn.Module</code>
-    Class: Base class for all neural network modules.
+<code>torch.nn.Module</code><br>
+    **Class**: Base class for all neural network modules.
 
-<code>torch.nn.functional</code>
-    Class: eg. convolution functions, pooling functions, normalization functions, loss functions
+<code>torch.nn.functional</code><br>
+    **Class**: eg. convolution functions, pooling functions, normalization functions, loss functions
 
-<code>torch.nn.init</code>
-    Class: Fills the tensor
+<code>torch.nn.init</code><br>
+    **Class**: Fills the tensor
 
 ### Containers
-* nn.Sequential
-    * A sequential container. Modules will be added to it in the order they are passed in the constructor. Alternatively, an ordered dict of modules can also be passed in.
+* **nn.Sequential**
+    * A sequential container. Modules will be added to it in the order they are passed in the constructor. Alternatively, an ordered dict of modules can also be passed in.<br>
+
         ```
         # Example of using Sequential
         model = nn.Sequential(
@@ -40,9 +41,9 @@ This blog is about how to build neural netword model using PyTorch with <code>nn
                 ('relu2', nn.ReLU())
                 ]))
         ```
-* nn.ModuleList
+* **nn.ModuleList**
     * ModuleList can be indexed like a regular Python list, but modules it contains are properly registered, and will be visible by all Module methods
-    * append(), insert(), extend()
+    * Basic Operations: append(), insert(), extend() <br>
 
     ```
     class ModuleList(nn.Module):
@@ -54,9 +55,10 @@ This blog is about how to build neural netword model using PyTorch with <code>nn
                 x = linear(x)
             return x 
     ```
-* nn.ModuleDict
+* **nn.ModuleDict**
     * ModuleDict can be indexed like a regular Python dictionary, but modules it contains are properly registered, and will be visible by all Module methods.
-    * clear(), items(), keys(), values(), pop()
+    * Basic Operations: clear(), items(), keys(), values(), pop() <br>
+
     ```
     class MyModule(nn.Module):
         def __init__(self):
@@ -85,7 +87,7 @@ import torch.nn as nn
 from collections import OrderedDict
 
 
-# ============================ Sequential
+# ============================ Sequential ============================
 class LeNetSequential(nn.Module):
     def __init__(self, classes):
         super(LeNetSequential, self).__init__()
@@ -153,7 +155,7 @@ class LeNetSequentialOrderDict(nn.Module):
 # print(output)
 
 
-# ============================ ModuleList
+# ============================ ModuleList ============================
 
 class ModuleList(nn.Module):
     def __init__(self):
@@ -177,7 +179,7 @@ class ModuleList(nn.Module):
 # print(output)
 
 
-# ============================ ModuleDict
+# ============================ ModuleDict ============================
 
 class ModuleDict(nn.Module):
     def __init__(self):
