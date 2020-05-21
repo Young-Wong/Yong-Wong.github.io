@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Initialization Methods and Loss Functions
@@ -12,7 +11,7 @@ tags: Pytorch
 <code>torch.nn.init</code>
 This operation is used to solve gradient vanishing and gradient exploding
 
-#### init.calculate_gain()
+### init.calculate_gain()
 <code>torch.nn.init.calculate_gain(nonlinearity, param=None)</code>
 Return the recommended gain value for the given nonlinearity function
 
@@ -21,7 +20,7 @@ Return the recommended gain value for the given nonlinearity function
 ```
 <br>
 
-#### init.uniform_()
+### init.uniform_()
 <code>torch.nn.init.uniform_(tensor, a=0.0, b=1.0)</code>
 
 Fills the input Tensor with values drawn from the uniform distribution \mathcal{U}(a, b)U(a,b) .
@@ -38,7 +37,7 @@ Fills the input Tensor with values drawn from the uniform distribution \mathcal{
 ```
 <br>
 
-#### init.normal_()
+### init.normal_()
 <code>torch.nn.init.normal_(tensor, mean=0.0, std=1.0)</code>
 
 Fills the input Tensor with values drawn from the normal distribution 
@@ -55,7 +54,7 @@ Fills the input Tensor with values drawn from the normal distribution
 ```
 <br>
 
-####init.xavier_uniform_()
+### init.xavier_uniform_()
 <code>torch.nn.init.xavier_uniform_(tensor, gain=1.0)</code>
 
 Fills the input Tensor with values according to the method described in Understanding the difficulty of training deep feedforward neural networks
@@ -72,7 +71,7 @@ torch.nn.init.xavier_normal_(tensor, gain=1.0)
 ```
 <br>
 
-#### init.kaiming_uniform_()
+### init.kaiming_uniform_()
 ```
 torch.nn.init.kaiming_uniform_(tensor, a=0, mode='fan_in', nonlinearity='leaky_relu’)
 ```
@@ -89,7 +88,7 @@ The resulting tensor will have values sampled from(−bound,bound)
 ```
 <br>
 
-#### init.kaiming_normal_()
+### init.kaiming_normal_()
 ```
 torch.nn.init.kaiming_normal_(tensor, a=0, mode='fan_in', nonlinearity='leaky_relu’)
 ```
@@ -105,7 +104,7 @@ The resulting tensor will have values sampled from (0, $std^2$)
 
 ## Loss function
 
-#### Cross entropy
+### Cross entropy
 ```
 torch.nn.CrossEntropyLoss(weight=None, size_average=None, ignore_index=-100, reduce=None, reduction='mean')
 ```
@@ -121,7 +120,7 @@ This criterion combines <code>nn.LogSoftmax()</code> and <code>nn.NLLLoss()</cod
     - Default: 'mean'
 
 <br>
-#### Binary Cross Entropy <br>
+### Binary Cross Entropy <br>
 ```
 torch.nn.BCELoss(weight=None, size_average=None, reduce=None, reduction='mean')
 ```
@@ -140,8 +139,9 @@ $l_n = -w_n[y_nlogx_n + (1-y_n)log(1-x_n)]$
 >>> output = loss(m(input), target)
 >>> output.backward()
 ```
+<br>
 
-#### BCEWithLogitsLoss<br>
+### BCEWithLogitsLoss<br>
 ```
 torch.nn.BCEWithLogitsLoss(weight=None, size_average=None, reduce=None, reduction='mean', pos_weight=None)
 ```
@@ -154,8 +154,8 @@ $l_n = -w_n[y_nlogσ(x_n) + (1-y_n)log(1-σ(x_n)]$
 
 **Parameters**
 - pos_weight (Tensor, optional) – a weight of positive examples. Must be a vector with length equal to the number of classes
-
-#### Other Loss Functions:
+<br>
+### Other Loss Functions:
 - nn.L1Loss
 - nn.MSELoss
 - nn.SmoothL1Loss
